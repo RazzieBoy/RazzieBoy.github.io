@@ -2,41 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="Styling/homeStyle.css">
     <link rel="icon" type="image/x-icon" href="">
-    <title>Home</title>
+    <title>Rasmus Nordberg</title>
 </head>
 <body>
     <header>
             <div class="headerStyle">
-                <h2> <a class="hideLink">Home</a></h2>
-                <h2> <a href="#projectsID" class="hideLink">Projects</a></h2>
-                <h2> <a href="#contactID" class="hideLink">Contact</a></h2>
-                <h2> <a href="#aboutMeID" class="hideLink">About Me</a></h2>
+                <h2 class="headerText"> <a class="hideLink">Home</a></h2>
+                <h2 class="headerText"> <a href="#projectsID" class="hideLink">Projects</a></h2>
+                <h2 class="headerText"> <a href="#contactID" class="hideLink">Contact</a></h2>
+                <h2 class="headerText"> <a href="#aboutMeID" class="hideLink">About Me</a></h2>
             </div>
     </header>
 
     <div class="pageContent">
-        <div id="projectsID" style="padding-top: 100px;">
+        <div id="projectsID" class="centerContent">
             <h1>Projects</h1>
-        </div>
-        <div id="aboutMeID" style="padding-top: 100px;">
-            <h1>About Me</h1>
-        </div>
-        <div id="contactID" style="padding-top: 100px;">
-            <h1>Contact</h1>
             <div>
-                <h3><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h3>
-                <h3><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h3>
-                <h3><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h3>
+                <h2>Minesweeper</h2>
+                <div><h3 style="font-weight: lighter;">A simple minesweeper clone that runs in a console window, this game was built in visual studio 2022 using c++</h3></div>
+                <video src="assets/minesweeperVideo.mkv" class="videoSize" autoplay="autoplay" loop="loop" controls="controls"></video>
+            </div>
+        </div>
+        <div id="aboutMeID" class="centerContent">
+            <h1>About Me</h1>
+
+            <div class="aboutMeCentered">
+                <div>
+                    <h3 class="aboutMeText">My name is Rasmus Nordberg</h3>
+                </div>
+                <div>
+                    <h3 class="aboutMeText">I grew up in a small town in the south of Sweden. From a young age I was fascinated by computers and video games. This fascination led to me studying video game developemnt in high school at LBS Halmstad, directly after I graduated high school I packed my bags and went to further my knowledge and education in Software Engineering at Yoobee Colleges in New Zealand</h3>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="contactID" class="centerContent">
+            <h2>Contact</h2>
+            <div>
+                <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
+                <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
+                <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_Resume.pdf" download>Download Resume</a></span></h4>
+                <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
             </div>
         </div>
     </div>
 
     <footer>
         
-    </footer>
-        
+    </footer> 
 </body>
 </html>
