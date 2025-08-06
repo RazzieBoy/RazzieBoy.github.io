@@ -59,15 +59,12 @@ footer{
   align-items: center;
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 5rem;
 }
 
 .videoSize{
   width: 100%;
   max-width: 900px;
   height: auto;
-  margin: 1rem auto;
-  display: block;
   margin-bottom: 5rem;
 }
 
@@ -86,7 +83,7 @@ footer{
   width: 100%;
   max-width: 60rem;
   font-weight: lighter;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .projectInfoText{
@@ -112,14 +109,7 @@ h1, h2, h3, h4 {
   .videoSize,
   .projectInfoText {
     width: 100%;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .centerContent {
-    padding-top: 60px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 95%;
   }
 
   .contactImageSize {
