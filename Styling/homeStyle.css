@@ -92,6 +92,11 @@ footer{
   max-width: 900px;
 }
 
+.contactInfo{
+  display: flex;
+  gap: 5rem;
+}
+
 h1, h2, h3, h4 {
     word-wrap: break-word;
     text-align: justify;
@@ -114,5 +119,8 @@ h1, h2, h3, h4 {
 
   .contactImageSize {
     height: 20px;
+  }
+  .contactInfo{
+  gap: 2rem;
   }
 }
