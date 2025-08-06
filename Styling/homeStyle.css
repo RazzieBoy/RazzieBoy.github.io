@@ -24,13 +24,14 @@ footer{
 }
 
 .headerText{
-  margin: unset;
+  margin: 0;
   font-weight: normal;
 }
 
 .headerStyle{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: #ffffff;
   max-height: 3rem;
 }
@@ -39,6 +40,7 @@ footer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .hideLink{
@@ -52,10 +54,12 @@ footer{
 }
 
 .centerContent{
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 5rem;
 }
 
 .videoSize{
@@ -64,7 +68,7 @@ footer{
   height: auto;
   margin: 1rem auto;
   display: block;
-  z-index: -1;
+  margin-bottom: 5rem;
 }
 
 .aboutMeText{
@@ -93,8 +97,8 @@ footer{
 
 h1, h2, h3, h4 {
     word-wrap: break-word;
-    text-size-adjust: 70%;
     text-align: justify;
+    margin-top: 0;
   }
 
 @media (max-width: 828px) {
@@ -104,18 +108,12 @@ h1, h2, h3, h4 {
     max-height: unset;
   }
 
-  .aboutMeCentered {
+  .aboutMeCentered,
+  .videoSize,
+  .projectInfoText {
     width: 100%;
+    max-width: 100%;
     padding: 0 1rem;
-  }
-
-  .aboutMeText {
-    text-align: justify;
-  }
-
-  .videoSize {
-    width: 100%;
-    height: auto;
   }
 
   .centerContent {
@@ -126,16 +124,5 @@ h1, h2, h3, h4 {
 
   .contactImageSize {
     height: 20px;
-  }
-
-  .projectInfoText{
-  font-weight: lighter; 
-  width: 100%; 
-  }
-
-  h1, h2, h3, h4 {
-    word-wrap: break-word;
-    text-size-adjust: 70%;
-    text-align: justify;
   }
 }
