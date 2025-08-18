@@ -5,95 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="Styling/homeStyle.css">
     <link rel="icon" type="image/x-icon" href="">
-    <title>Rasmus Nordberg</title>
+    <title>Rasmus Nordberg Portfolio</title>
 </head>
 <body>
-    <header>
-            <div class="headerStyle">
-                <h2 class="headerText"> <a class="hideLink" href="#">Home</a></h2>
-                <h2 class="headerText"> <a href="#aboutMeID" class="hideLink">About Me</a></h2>
-                <h2 class="headerText"> <a href="#projectsID" class="hideLink">Projects</a></h2>
-                <h2 class="headerText"> <a href="#contactID" class="hideLink">Contact</a></h2>
-            </div>
-    </header>
+    <div id="englishVersion">
+        <header>
+            <nav class="headerStyle">
+                <div class="navLinks">
+                <a href="#" class="hideLink">Home</a>
+                <a href="#aboutMeID" class="hideLink">About Me</a>
+                <a href="#projectsID" class="hideLink">Projects</a>
+                <a href="#contactID" class="hideLink">Contact</a>
+                </div>
+                <button onclick="languageSwitch()" class="languageButton">
+                <img src="images/uk.png" alt="Switch Language" class="flagIcon">
+                </button>
+            </nav>
+        </header>
 
+        <div class="pageContent">
+            <div id="aboutMeID" class="projectCard">
+                <h1 class="centerContent">About Me</h1>
+                <p>
+                    Hello, my name is Rasmus Nordberg, and I am a Software Engineer passionate about video game development and interactive experiences.
+                </p>
     
+                <p>
+                    I grew up in the southern part of Sweden and discovered my passion for computers and video games at an early age. 
+                    This led me to study video game development at LBS Halmstad, where I built my first projects.
+                </p>
 
-    <div class="pageContent">
-        <div id="aboutMeID" class="centerContent">
-            <div class="aboutMeCentered">
-                <div>
-                    <h1 class="aboutMeText">My name is Rasmus Nordberg</h1>
-                </div>
-                <div>
-                    <h3 class="aboutMeText">
-                        I am from a small town in the southern part of Sweden. From a young age I was fascinated by computers and video games. 
-                        This fascination led to me studying video game development in high school at LBS Halmstad, 
-                        directly after I graduated high school I packed my bags and went to further my knowledge and education in Software Engineering at Yoobee Colleges in New Zealand.
-                    </h3>
-                </div>
+                <p>
+                    After graduating high school, I pursued further studies in Software Engineering at Yoobee Colleges in New Zealand, 
+                    where I expanded my skills in C++, C#, Unity, Godot, and Unreal Engine.
+                </p>
+
+                <p>
+                    My focus as a is on creating engaging, polished gameplay experiences with smooth mechanics and scalable systems. 
+                    I enjoy combining technical problem-solving with creative design.
+                </p>
             </div>
-        </div>
 
-        <div id="projectsID" class="centerContent">
-            <h1>Projects</h1>
-            <div class="centerContent">
-                <h2>Minesweeper</h2>
-                <div class="centerContent">
-                    <h3 class="projectInfoText">A simple minesweeper clone that runs in a console window, this game was built in visual studio 2022 using c++
-                        <br><a href="https://github.com/RazzieBoy/Minesweeper">Github Repo Link</a></h3>
+            <div id="projectsID" class="centerContent">
+                <h1 style="margin-top: 20px;">Projects</h1>
+                
+                <div class="projectCard">
+                    <h2 class="centerContent">Minesweeper</h2>
+                    <p>
+                        A simple minesweeper clone that runs in a console window, this game was built in visual studio 2022 using c++
+                        <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    
                     <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                 </div>
-            </div>
-            
-            <div class="centerContent">
-                <h2>Overwave</h2>
-                <div class="centerContent">
-                    <h3 class="projectInfoText">A roguelike bullet hell survival game where the player has to try and survive waves of enemies with increasing difficulty
-                         as the player progresses to higher levels in the game. <br> This game was made in Godot with C# and it was created over an 16 week time span where 
-                         8 weeks was for planning and figuring out the game concept fully and the other 8 weeks was used for the development of the game. <br><a href="https://github.com/RazzieBoy/RougelikeGame">Github Repo Link</a></h3>
+
+                <div class="projectCard">
+                    <h2 class="centerContent">Overwave</h2>
+                    <p>
+                        A roguelike bullet hell survival game where the player has to try and survive waves of enemies with increasing difficulty
+                        as the player progresses to higher levels in the game. This game was made in Godot with C# and it was created over an 16 week time span where 
+                        8 weeks was for planning and figuring out the game concept fully and the other 8 weeks was used for the development of the game.
+                        <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    
                     <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                 </div>
-            </div>
 
-            <div class="centerContent">
-                <h2>Threads</h2>
-                <div class="centerContent">
-                    <h3 class="projectInfoText">A 3D platformer made in Unity (Version 2022) where the goal of the game is to get to the end of the level as quickly as possible with 
+                <div class="projectCard">
+                    <h2 class="centerContent">Threads</h2>
+                    <p>
+                        A 3D platformer made in Unity (Version 2022) where the goal of the game is to get to the end of the level as quickly as possible with 
                         the existing game mechanics. It does support LAN connection multiplayer (local area network). This project was made over a 16 week time span where the first 8 
                         weeks was used for research and planning the project and the last 8 weeks was used for the development of the game. 
-                        <br>Video provided is an MVP (minimal viable product) showcase. <br><a href="https://github.com/RazzieBoy/The-Thread">Github Repo Link</a></h3>
+                        <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    
                     <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                 </div>
-            </div>
 
-            <div class="centerContent">
-                <h2>The Breakout</h2>
-                <div class="centerContent">
-                    <h3 class="projectInfoText">A VR (virtual reality) escape room created in Unreal Engine with C++ Blueprints. The goal of this project was to try and get a good understanding 
+                <div class="projectCard">
+                    <h2 class="centerContent">The Breakout</h2>
+                    <p>
+                        A VR (virtual reality) escape room created in Unreal Engine with C++ Blueprints. The goal of this project was to try and get a good understanding 
                         of what it is like to create virtual reality games. This was done by creating an escape room in which the player has to figure out how to escape as quickly as possible.
                         This project was created over a 16 week period where the first 8 weeks was dedicated to planning the project and the last 8 weeks were used for the development proccess of the project.
-                        <br>This project was created with a classmate of mine at Yoobee Colleges. <br><a href="https://github.com/r4moss/BREAKOUT-VR">Github Repo Link</a></h3>
+                        <br>This project was created with a classmate of mine at Yoobee Colleges.
+                        <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    
                     <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                 </div>
             </div>
-        </div>
-        
-        <div id="contactID" class="centerContent">
-            <h2>Contact</h2>
-            <div class="contactInfo">
-                <div>
-                    <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_Resume.pdf" download>Download Resume</a></span></h4>
-                    <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
+            
+            <footer>
+                <div id="contactID" class="centerContent">
+                    <h2 >Contact</h2>
+                    <div class="contactInfo">
+                                    <div>
+                            <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_Resume.pdf" download>Download Resume</a></span></h4>
+                            <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
+                        </div>
+                        <div>
+                            <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
+                            <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
-                    <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
-                </div>
-            </div>
+            </footer>
         </div>
     </div>
-    <footer>
-    </footer> 
+
+    <!-- Swedish text version of the webpage -->
+    <div hidden id="swedishVersion">
+        <header>
+                <nav class="headerStyle">
+                    <div class="navLinks">
+                    <a href="#" class="hideLink">Hem</a>
+                    <a href="#aboutMeID" class="hideLink">Om Mig</a>
+                    <a href="#projectsID" class="hideLink">Projekt</a>
+                    <a href="#contactID" class="hideLink">Kontakt</a>
+                    </div>
+                    <button onclick="languageSwitch()" class="languageButton">
+                    <img src="images/sweden.png" alt="Switch Language" class="flagIcon">
+                    </button>
+                </nav>
+            </header>
+        <div class="pageContent">
+            <div id="aboutMeID" class="projectCard">
+                <h1 class="centerContent">Om Mig</h1>
+                <p>
+                    Hej, jag heter Rasmus Nordberg och jag är en mjukvaruingenjör med passion för spelutveckling och interaktiva upplevelser.
+                </p>
+    
+                <p>
+                    Jag växte upp i södra Sverige och upptäckte mitt intresse för datorer och videospel i tidig ålder. 
+                    Detta ledde mig till att studera spelutveckling på LBS Halmstad, här lärde jag mig grunderna i programmering och spelutveckling.
+
+                </p>
+
+                <p>
+                    Efter att ha avslutat gymnasiet fortsatte jag mina studier inom programmering och spelutveckling på Yoobee Colleges i Nya Zeeland,  
+                    där utökade jag mina färdigheter inom C++, C#, Unity, Godot och Unreal Engine.
+                </p>
+
+                <p>
+                    Mitt fokus som mjukvaruingenjör ligger på att skapa engagerande, polerade spelupplevelser med smidiga mekaniker och skalbara system.
+                </p>
+            </div>
+
+            <div id="projectsID" class="centerContent">
+                <h1>Projekt</h1>
+                
+                <div class="projectCard">
+                    <h2 class="centerContent">Minesweeper</h2>
+                    <p>
+                        En enkel minesweeper-klon som körs i ett konsolfönster, detta spel byggdes i Visual Studio 2022 med C++
+                        <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                </div>
+
+                <div class="projectCard">
+                    <h2 class="centerContent">Overwave</h2>
+                    <p>
+                        Ett roguelike bullet hell survival-spel där spelaren måste försöka överleva vågor av fiender med ökande svårighetsgrad
+                        när spelaren går vidare till högre nivåer i spelet. Detta spel gjordes i Godot med C# och det skapades över en 16-veckors tidsperiod där
+                        8 veckor var för planering och att helt förstå spelkonceptet och de andra 8 veckorna användes för utvecklingen av spelet.
+                        <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                </div>
+
+                <div class="projectCard">
+                    <h2 class="centerContent">Threads</h2>
+                    <p>
+                        En 3D-plattformsspel gjord i Unity (Version 2022) där målet med spelet är att komma till slutet av nivån så snabbt som möjligt med
+                        befintliga spelmekaniker. Det stöder LAN-anslutning multiplayer (lokalt nätverk). Detta projekt gjordes över en 16-veckors tidsperiod där de första 8
+                        veckorna användes för forskning och planering av projektet och de sista 8 veckorna användes för utvecklingen av spelet.
+                        <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                </div>
+
+                <div class="projectCard">
+                    <h2 class="centerContent">The Breakout</h2>
+                    <p>
+                        Ett VR (virtual reality) escape room skapat i Unreal Engine med C++ Blueprints. Målet med detta projekt var att försöka få en bra förståelse
+                        för hur det är att skapa virtuella verklighetsspel. Detta gjordes genom att skapa ett escape room där spelaren måste lista ut hur man tar sig ut så snabbt som möjligt.
+                        Detta projekt skapades över en 16-veckors period där de första 8 veckorna användes för planering av projektet och de sista 8 veckorna användes för
+                        utvecklingsprocessen av projektet.
+                        <br>Detta projekt skapades tillsammans med en klasskamrat på Yoobee Colleges.
+                        <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    </p>
+                    <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                </div>
+            </div>
+            <footer>
+                <div id="contactID" class="centerContent">
+                    <h2>Kontakt</h2>
+                    <div class="contactInfo">
+                        <div>
+                            <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_Resume.pdf" download>Ladda Ner CV</a></span></h4>
+                            <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
+                        </div>
+                        <div>
+                            <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
+                            <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+     
+<script>
+    function languageSwitch(){
+        var englishVersion = document.getElementById("englishVersion");
+        var swedishVersion = document.getElementById("swedishVersion");
+        if (englishVersion.hidden) {
+            englishVersion.hidden = false;
+            swedishVersion.hidden = true;
+        }
+        else {
+            englishVersion.hidden = true;
+            swedishVersion.hidden = false;
+        }
+    }
+    // Set the initial state to English version visible
+    document.getElementById("englishVersion").hidden = false;
+    document.getElementById("swedishVersion").hidden = true;
+
+</script>
 </body>
 </html>
