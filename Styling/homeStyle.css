@@ -19,7 +19,6 @@ footer{
   justify-content: center;
   width: 100%;
   background-color: #c7c7c7;
-  border-radius: 10px;
 }
 
 .headerStyle{
@@ -101,15 +100,16 @@ h1, h2, h3, h4 {
 #aboutMeID,
 #projectsID,
 #contactID {
-  scroll-margin-top: 70px; /* Adjust to match your header height */
+  scroll-margin-top: 90px; /* Adjust to match your header height */
 }
 
 .projectCard{
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px auto;
+  margin: 0px 0px 30px;
   max-width: 960px;
+  min-width: 325px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
@@ -151,6 +151,7 @@ h1, h2, h3, h4 {
     gap: 10px;
     max-height: unset;
     font-size: 0.8rem;
+    min-width: 240px;
   }
 
   .pageContent {
