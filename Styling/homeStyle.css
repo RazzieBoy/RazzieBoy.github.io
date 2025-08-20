@@ -30,6 +30,7 @@ footer{
   background-color: #262626;
   border-radius: 12px;
   width: fit-content;
+  min-width: 325px;
   margin: 1.5rem auto;
   font-size: 1.2rem;
 }
@@ -38,6 +39,7 @@ footer{
   display: flex;
   gap: 1.5rem;
   color: white;
+  align-items: center;
 }
 
 .languageButton{
@@ -109,7 +111,6 @@ h1, h2, h3, h4 {
   padding: 20px;
   margin: 0px 0px 30px;
   max-width: 960px;
-  min-width: 325px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
@@ -137,12 +138,6 @@ h1, h2, h3, h4 {
 
 .githubLink:hover {
   text-decoration: underline;
-}
-
-.languageButton{
-  background: none;
-  border:none;
-  cursor: pointer;
 }
 
 @media (max-width: 828px) {
