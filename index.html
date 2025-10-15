@@ -120,9 +120,9 @@
         <header>
                 <nav class="headerStyle">
                     <div class="navLinks">
-                        <a href="#aboutMeID" class="hideLink">Om Mig</a>
-                        <a href="#projectsID" class="hideLink">Projekt</a>
-                        <a href="#contactID" class="hideLink">Kontakt</a>
+                        <a href="#omMigID" class="hideLink">Om Mig</a>
+                        <a href="#projektID" class="hideLink">Projekt</a>
+                        <a href="#kontaktID" class="hideLink">Kontakt</a>
                         <button onclick="languageSwitch()" class="languageButton">
                         <img src="images/sweden.png" alt="Switch Language" class="flagIcon">
                         </button>
@@ -130,7 +130,7 @@
                 </nav>
             </header>
         <div class="pageContent">
-            <div id="aboutMeID" class="projectCard">
+            <div id="omMigID" class="projectCard">
                 <h1 class="centerContent">Om Mig</h1>
                 <p>
                     Hejsan, mitt namn är Rasmus Nordberg, jag är en mjukvaruingenjör med passion för skapande av roliga och intressanta interaktiva digitala upplevelser och datorspel.
@@ -153,7 +153,7 @@
                 </p>
             </div>
 
-            <div id="projectsID" class="centerContent">
+            <div id="projektID" class="centerContent">
                 <h1>Projekt</h1>
                 
                 <div class="projectCard">
@@ -203,7 +203,7 @@
             </div>
             
             <footer>
-                <div id="contactID" class="centerContent">
+                <div id="kontaktID" class="centerContent">
                     <h2>Kontakt</h2>
                     <div class="contactInfo">
                         <div>
@@ -220,21 +220,6 @@
         </div>
     </div>
      
-<script>
-    function languageSwitch(){
-        var englishVersion = document.getElementById("englishVersion");
-        var swedishVersion = document.getElementById("swedishVersion");
-        if (englishVersion.hidden) {
-            englishVersion.hidden = false;
-            swedishVersion.hidden = true;
-        }
-        else {
-            englishVersion.hidden = true;
-            swedishVersion.hidden = false;
-        }
-    }
-    document.getElementById("englishVersion").hidden = false;
-    document.getElementById("swedishVersion").hidden = true;
-</script>
+<script src="index.js"></script>
 </body>
 </html>
