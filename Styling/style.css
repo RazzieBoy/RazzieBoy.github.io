@@ -88,8 +88,14 @@ footer{
 
 .videoSize{
   width: 100%;
-  max-width: 960px;
+  max-width: 750px;
   height: auto;
+}
+
+.selfieImage{
+  width: 300px;
+  height: auto;
+  border-radius: 50px;
 }
 
 .contactInfo{
@@ -117,7 +123,7 @@ h1, h2, h3, h4 {
   border-radius: 10px;
   padding: 20px;
   margin: 0px 0px 30px;
-  max-width: 960px;
+  max-width: 1250px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -128,6 +134,14 @@ h1, h2, h3, h4 {
 .projectCard p {
   font-size: 1rem;
   color: #333;
+  max-width: 750px;
+  margin-block: 0px;
+}
+
+.projectCardStructure{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .githubLink {
@@ -172,5 +186,15 @@ h1, h2, h3, h4 {
 
   .aboutMeText {
     font-size: 0.9rem;
+  }
+
+  .projectCardStructure{
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projectCard p {
+    margin-block: 1em;
   }
 }
