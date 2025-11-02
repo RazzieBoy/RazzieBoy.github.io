@@ -59,7 +59,7 @@ function closePopUpSwedish() {
     document.querySelectorAll('.popUpOverlay').forEach(function(el){ el.style.display = 'none'; });
     document.querySelectorAll('.popUpContent').forEach(function(el){ el.style.display = 'none'; });
 }
-// Close when clicking any element with the overlay class
+
 window.addEventListener("click", function(e) {
     if (e.target && e.target.classList && e.target.classList.contains('popUpOverlay')) {
         // closes all popups (handles duplicates/one-per-language)
@@ -67,7 +67,33 @@ window.addEventListener("click", function(e) {
     }
 });
 
-// Close with Escape key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closePopUp();
+});
+
+function createStars() {
+  const numberOfStars = 400;
+  const spaceLayer = document.getElementById('spaceLayer');
+
+  for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    // Random size, position, and animation duration for each star
+    const size = Math.random() * 4 + 1;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${Math.random() * 100}vw`;
+    const topPosition = (Math.random() * 400) - 100; 
+    star.style.top = `${topPosition}vh`;
+    star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+    spaceLayer.appendChild(star);
+  }
+}
+
+createStars();
+
+window.addEventListener('scroll', () => {
+    const pageScroll = window.scrollY;
+    document.getElementById('spaceLayer').style.transform 
+    = `translateY(${pageScroll * 0.5}px)`;
 });
