@@ -6,310 +6,456 @@
     <link rel="stylesheet" href="Styling/style.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>Rasmus Nordberg | Software Engineer</title>
+    <script defer src="index.js"></script>
 </head>
 <body>
-    <div id="englishVersion">
+    <!--ENGLISH SECTION STARTS-->
+    <section id="englishVersion">
+        <nav class="navbar">
+            <h1 class="logo">Rasmus Nordberg</h1>
+            <ul class="navigationLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button onclick="languageSwitch()" class="languageButton">
+                    <img src="images/uk.png" alt="Switch Language" class="flagIcon"></button></li>
+            </ul>
+        </nav>
+
         <header>
-            <nav class="headerStyle">
-                <div class="navLinks">
-                    <a href="#aboutMeID" class="hideLink">About Me</a>
-                    <a href="#projectsID" class="hideLink">Projects</a>
-                    <a href="#contactID" class="hideLink">Contact</a>
-                    <button onclick="languageSwitch()" class="languageButton">
-                    <img src="images/uk.png" alt="Switch Language" class="flagIcon">
-                    </button>
-                </div>
-            </nav>
+            <h2>Hi, I'm <span>Rasmus</span></h2>
+            <h3>Software Engineer | Game Developer | Web Developer | UI/UX | Problem Solver</h3>
+            <p>I enjoy creating fun and engaging experiences while maintaining solid code with effective and efficient development technologies from concept ideas to finished products</p>
+            <img class="selfPortait" src="images/selfie.jpg" alt="">
+            <div class="headerButtons">
+                <a href="#projects" class="button">View Projects</a>
+                <a href="#contact" class="button">Contact Me</a>
+            </div>
         </header>
 
-        <div class="pageContent">
-            <div id="aboutMeID" class="projectCard">
-                <h1 class="centerContent">About Me</h1>
-                <div class="projectCardStructure">
-                    <div>
-                        <p>
-                            Hello, my name is Rasmus Nordberg, I am a Software Engineer with a passion for creating fun, 
-                            interesting and enjoyable interactive experiences and video games.<br>
-        
-                            I grew up in the southern part of Sweden, I discovered my passion for computers and video games at an early age. 
-                            This led me to studying video game development at LBS Halmstad, where I learnt the fundamentals for programming and game development 
-                            through both theoretical and practical means. <br>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p class="aboutMeText">
+            Hello, my name is Rasmus Nordberg, I am a software engineer with a passion for creating fun, 
+            interesting and enjoyable interactive experiences and video games.<br><br>
+            
+            I grew up in the southern part of Sweden, I discovered my passion for computers and video games at an early age. 
+            This led me to studying video game development at LBS Halmstad, where I learnt the fundamentals for programming and game development. 
+            through both theoretical and practical means.<br><br>
+            
+            After I graduated from LBS Halmstad I pursued further studies in software engineering at Yoobee Colleges in New Zealand, 
+            where I expanded my skills in C++, C#, Unity, Godot, Unreal Engine and HTML5, CSS3 and Javascript for web development.<br><br>
+            
+            My focus as a software engineer is to create experiences that are fun and engaging, be it video games or 
+            any interactive experience. I enjoy combining technical problem solving with creative designs while also trying to challenge 
+            myself at every step to become more knowledgeable.
+        </p>
+        </section>
 
-                            After I graduated from LBS Halmstad I pursued further studies in Software Engineering at Yoobee Colleges in New Zealand, 
-                            where I expanded my skills in C++, C#, Unity, Godot, Unreal Engine and HTML5, CSS3 and Javascript for web development. <br>
-
-                            My focus as a software engineer is to create experiences that are fun and engaging, be it video games or 
-                            any interactive experience. I enjoy combining technical problem solving with creative designs while also trying to challenge 
-                            myself at every step to become more knowledgeable.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="images/selfie.png" class="selfieImage" alt="Profile Picture" class="profilePictureStyle">
-                    </div>
-                </div>
-            </div>
-
-            <div id="projectsID" class="centerContent">
-                <h1>Projects</h1>
-                
-                <div class="projectCard">
-                    <h2 class="centerContent">Minesweeper</h2>
-                    <div class="projectCardStructure">
-                        <div>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projectGrid">
+                <div id="Minesweeper" class="projectCard">
+                    <h3>Minesweeper</h3>
+                    <div class="projectCardContent">
+                        <span>
                             <p>
                                 Simple minesweeper clone running in the console. The goal of this game is to clear an entire minefield without setting of any bombs. 
-                                The layout of the minefield is randomized each time a new game is started and the user can select a coordinate they believe holds no bombs. 
-                                The minefield display any emtpy coordinates as well as ones directly next to any number of bombs, telling the user how many are directly adjacent. 
-                                This project was created with C++ in visual Studio 2022. 
-                                
-                                <br><br>From the development of this project I learned fundamentals of C++ programming such as working with arrays, functions, loops and conditionals. 
-                                I really enjoyed figuring out how to do flood filling algorithm to reveal empty spaces in the minefield, as well as how to randomzie the placent of bombs and how many bombs are adjacent to each coordinate.
-                               
-                                <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink">Github Repo Link</a>
+                                <br><a class="popUpButton" onclick="openMinesweeperPopUp()">Read more</a>
+                                <br><br>Tools & Technologies:
+                                <ul class="bulletList">
+                                    <li>IDE: Visual Studio 2022</li>
+                                    <li>Programming Language: C++</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                        </span>
+                        <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                     </div>
                 </div>
-
                 <div class="projectCard">
-                    <h2 class="centerContent">Overwave</h2>
-                    <div class="projectCardStructure">
-                        <div>
+                    <h3>Overwave</h3>
+                    <div class="projectCardContent">
+                        <span>
                             <p>
-                                A roguelike bullet hell survival game where the player has to try and survive waves of enemies with increasing difficulty 
-                                as the player progresses to higher levels. The player has 4 abilities to use to survive, after each round is completed a random item is given to the player to improve their stats 
-                               
-                                <br><br>This project has taught me a lot about game development as a whole, from learning a new game engine (Godot) and further expanding my knowledge of C# programming.
-                                The part I enjoyed the most from this project was learning how to create different enemy AI behaviours and balancing the game mechanics to make sure the game is fun and challenging to play
-                                for both beginner and experienced players.
-                                
-                                <br><br>This game was made over a 16-week timespan, the first 8 weeks were for planning and structuring the development plan and to figure out the mechanical restrictions.
-                                The last 8 weeks were used for the development of the game, this includes learning how Godot works, writing the scripts for the game mechanics, creating art and playtesting.
-                                
-                                <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
+                                A roguelike bullet hell survival game where the player has to try and survive waves of enemies with increasing difficulty
+                                <br><a class="popUpButton" onclick="openOverwavePopUp()">Read more</a>
+                                <br><br>Tools & Technologies:
+                                <ul class="bulletList">
+                                    <li>IDE: Godot's Built In Editor</li>
+                                    <li>Game Engine: Godot 4</li>
+                                    <li>Programming Language: C#</li>
+                                    <li>Asset Design Program: Photoshop</li>
+                                    <li>Design Methodology: Agile & Scrum</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                        </span>
+                        <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                     </div>
                 </div>
-
                 <div class="projectCard">
-                    <h2 class="centerContent">Threads</h2>
-                    <div class="projectCardStructure">
-                        <div>
+                    <h3>Threads</h3>
+                    <div class="projectCardContent">
+                        <span>
                             <p>
                                 A 3D platformer where the goal of the game is to get to the end of the level as quickly as possible through figuring out which game mechanics to use in different situations.
-                                It supports LAN connection multiplayer (local area network). However, this feature was never fully implemented due to time constraints and may not work as intended.
-                                
-                                <br><br>I have always enjoyed 3D platformers with a focus on speedrunning and time trials, so I decided to challenge myself to try to create my own version of this genre.
-                                From the development of this project I learned a lot about the Unity engine and how it's physics system functions, as well as it's networking capabilities for multiplayer games.
-                                The implementation of local area network multiplayer was a big challenge for me, however, I feel it was the most fun and rewarding part of the project even though i struggled with it the most.
-                                I also really enjoyed creating the player controller and figuring out how to make the movement feel as responsive and fluid as possible.
-
-                                <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                                <br><a class="popUpButton" onclick="openThreadsPopUp()">Read more</a>
+                                <br><br>Tools & Technologies:
+                                <ul class="bulletList">
+                                    <li>IDE: Visual Studio 2022</li>
+                                    <li>Game Engine: Unity</li>
+                                    <li>Programming Language: C#</li>
+                                    <li>Design Program: Photoshop</li>
+                                    <li>Design Methodology: Agile & Scrum</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                        </span>
+                        <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                     </div>
                 </div>
-
                 <div class="projectCard">
-                    <h2 class="centerContent">The Breakout</h2>
-                    <div class="projectCardStructure">
-                        <div>
-                            <p>
-                                A VR (virtual reality) escape room, where the name of the game is to escape the room as quickly as possible by solving puzzles and finding clues. This project was made with Unreal Engine using C++ Blueprints together with a classmate of mine.
-
-                                <br><br>This project was very fun to work on, it was my first time making a VR experience. I learned a lot of new things about design and technical limiatations when it comes game development, especially for VR.
-                                The biggest challenge for me was to figure out how to make interactions feel natural for the player, together with ensuring smooth performance to avoid motion sickness.
-
-                                <br><br>I worked on the technical side of the project, creating the blueprints and programming the interactions for the puzzles and objects in the escape room. 
-                                I playtested the game extensively to ensure the moevent, puzzles and interactions functioned as intended and were enjoyable for the player. 
-
-                                <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    <h3>The Breakout</h3>
+                    <div class="projectCardContent">
+                        <span>
+                            <p style="text-align: justify;">
+                                A VR (virtual reality) escape room, where the name of the game is to escape the room as quickly as possible by solving puzzles and finding clues.
+                                <br><a class="popUpButton" onclick="openBreakoutPopUp()">Read more</a>
+                                <br><br>Tools & Technologies:
+                                <ul class="bulletList">
+                                    <li>IDE: Unreal Engines Built In Blueprint Editor</li>
+                                    <li>Game Engine: Unreal Engine 5</li>
+                                    <li>Programming Language: C++ Blueprints</li>
+                                    <li>Asset Design Program: Maya</li>
+                                    <li>Design Methodology: Agile & Scrum</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
-                    </div>  
+                        </span>
+                        <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                    </div>
                 </div>
             </div>
-            
-            <footer>
-                <div id="contactID" class="centerContent">
-                    <h2 >Contact</h2>
-                    <div class="contactInfo">
-                                    <div>
-                            <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_CV_English.pdf" download>Download Resume</a></span></h4>
-                            <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
-                        </div>
-                        <div>
-                            <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
-                            <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
+        </section>
 
-    <!-- Swedish text version of the webpage -->
-    <div hidden id="swedishVersion">
-        <header>
-                <nav class="headerStyle">
-                    <div class="navLinks">
-                        <a href="#omMigID" class="hideLink">Om Mig</a>
-                        <a href="#projektID" class="hideLink">Projekt</a>
-                        <a href="#kontaktID" class="hideLink">Kontakt</a>
-                        <button onclick="languageSwitch()" class="languageButton">
-                        <img src="images/sweden.png" alt="Switch Language" class="flagIcon">
-                        </button>
-                    </div>
-                </nav>
-            </header>
-        <div class="pageContent">
-            <div id="omMigID" class="projectCard">
-                <h1 class="centerContent">Om Mig</h1>
-                <div class="projectCardStructure">
-                    <div>
+        <section class="popUps">
+            <div id="popUpOverlay" class="popUpOverlay"></div>
+            <div id="minesweeperPopUp" class="popUpContent">
+                <button class="exitButton" onclick="closePopUp()">+</button>
+                <h2>Minesweeper</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/minesweeperVideo.mp4" loop="loop" controls="controls"></video>
                         <p>
-                            Hejsan, mitt namn är Rasmus Nordberg, jag är en mjukvaruingenjör med passion för skapande av roliga och intressanta interaktiva digitala upplevelser och datorspel.<br>
-                    
-                            Jag är uppväxt i den södra delen av Sverige, jag upptäckte min passion för datorer och datorspel vid en tidig ålder. 
-                            Detta ledde mig till att studera spelutveckling  på LBS Halmstad, här lärde jag mig grunderna för programmering och 
-                            spelutveckling genom både teoretiska och praktiska läromedel.<br>
-                    
-                            Efter jag hade tagit studenten på LBS Halmstad fortsatte jag min utbildning inom mjukvaruutveckling på Yoobee Colleges i Nya Zeeland, 
-                            här utökade jag mina förmågor inom C++, C#, Unity, Godot, Unreal Engine och HTML5, CSS3 och Javascript för webbutveckling.<br>
+                            Simple minesweeper clone running in the console. The goal of this game is to clear an entire minefield without setting of any bombs. 
+                            The layout of the minefield is randomized each time a new game is started and the user can select a coordinate they believe holds no bombs. 
+                            The minefield display any emtpy coordinates as well as ones directly next to any number of bombs, telling the user how many are directly adjacent. 
+                            This project was created with C++ in visual Studio 2022. 
+                            
+                            <br><br>From the development of this project I learned fundamentals of C++ programming such as working with arrays, functions, loops and conditionals. 
+                            I really enjoyed figuring out how to do flood filling algorithm to reveal empty spaces in the minefield, as well as how to randomzie the placent of bombs and how many bombs are adjacent to each coordinate.
                         
-                            Mitt fokus som mjukvaruingenjör är att skapa upplevelser som är roliga och fångande, om det är datorspel eller andra interaktiva upplevelser. 
-                            Jag tycker om att kombinera teknisk problemlösning med kreativa designer samtidigt som jag försöker utmana mig själv vid varje steg för att bli mer kunnig
+                            <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink">Github Repo Link</a>
                         </p>
                     </div>
-                    <div>
-                            <img src="images/selfie.png" class="selfieImage" alt="Profile Picture" class="profilePictureStyle">
+                </div>
+            </div>
+            <div id="overwavePopUp" class="popUpContent">
+                <button class="exitButton" onclick="closePopUp()">+</button>
+                <h2>overwave</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/OverwaveVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            A roguelike bullet hell survival game where the player has to try and survive waves of enemies with increasing difficulty 
+                            as the player progresses to higher levels. The player has 4 abilities to use to survive, after each round is completed a random item is given to the player to improve their stats 
+                            
+                            <br><br>This project has taught me a lot about game development as a whole, from learning a new game engine (Godot) and further expanding my knowledge of C# programming.
+                            The part I enjoyed the most from this project was learning how to create different enemy AI behaviours and balancing the game mechanics to make sure the game is fun and challenging to play
+                            for both beginner and experienced players.
+                            
+                            <br><br>This game was made over a 16-week timespan, the first 8 weeks were for planning and structuring the development plan and to figure out the mechanical restrictions.
+                            The last 8 weeks were used for the development of the game, this includes learning how Godot works, writing the scripts for the game mechanics, creating art and playtesting.
+                            
+                            <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
                     </div>
                 </div>
             </div>
+            <div id="threadsPopUp" class="popUpContent">
+                <button class="exitButton" onclick="closePopUp()">+</button>
+                <h2>Threads</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/threadsVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            A 3D platformer where the goal of the game is to get to the end of the level as quickly as possible through figuring out which game mechanics to use in different situations.
+                            It supports LAN connection multiplayer (local area network). However, this feature was never fully implemented due to time constraints and may not work as intended.
+                            
+                            <br><br>I have always enjoyed 3D platformers with a focus on speedrunning and time trials, so I decided to challenge myself to try to create my own version of this genre.
+                            From the development of this project I learned a lot about the Unity engine and how it's physics system functions, as well as it's networking capabilities for multiplayer games.
+                            The implementation of local area network multiplayer was a big challenge for me, however, I feel it was the most fun and rewarding part of the project even though i struggled with it the most.
+                            I also really enjoyed creating the player controller and figuring out how to make the movement feel as responsive and fluid as possible.
 
-            <div id="projektID" class="centerContent">
-                <h1>Projekt</h1>
-                
-                <div class="projectCard">
-                    <h2 class="centerContent">Minesweeper</h2>
-                    <div class="projectCardStructure">
-                        <div>
-                            <p>
-                                Enkel minesweeper-klon som körs i konsollen. Målet med detta spel är att rensa ett helt minfält utan att utlösa några bomber.
-                                Layouten av minfältet är slumpmässigt genererad varje gång ett nytt spel startas och användaren kan välja en koordinat som de tror inte har några bomber.
-                                Minfältet visar alla tomma koordinater samt de som är direkt intill en eller flera bomber. Detta projekt skapades med C++ i Visual Studio 2022.
-
-                                <br><br> Från utvecklingen av detta projekt lärde jag mig grunderna i C++ programmering såsom att arbeta med arrayer, funktioner, loopar och villkor.
-                                Jag tyckte det var väldigt roligt att lista ut hur man skulle skapa flood-fill algoritmen för att avslöja tomma ytor i minfältet, även hur man slumpade placeringen av bomber och många bomber som är intill varje koordinat.
-                                
-                                <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink"> Github Repo Link</a>
-                            </p>
-                        </div>
-                        <div>
-                            <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                            <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
                     </div>
                 </div>
+            </div>
+            <div id="breakoutPopUp" class="popUpContent">
+                <button class="exitButton" onclick="closePopUp()">+</button>
+                <h2>The Breakout</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/TheBreakoutDemoVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            A VR (virtual reality) escape room, where the name of the game is to escape the room as quickly as possible by solving puzzles and finding clues. This project was made with Unreal Engine using C++ Blueprints together with a classmate of mine.
 
-                <div class="projectCard">
-                    <h2 class="centerContent">Overwave</h2>
-                    <div class="projectCardStructure">
-                        <div>  
-                            <p>
-                                Ett roguelike bullet hell survival-spel där spelaren måste försöka överleva vågor av fiender med ökande svårighetsgrad  när spelaren går vidare till högre nivåer i spelet. 
-                                Spelaren har 4 förmågor att använda för att överleva, efter varje runda som slutförs ges ett slumpmässigt föremål till spelaren för att förbättra kararens egenskaper.
-                                
-                                <br><br>Detta projekt har lärt mig mycket om spelutveckling som helhet, från att lära mig en ny spelmotor (Godot), samt att utöka mina kunskaper inom C# programmering och mycket mer.
-                                Det jag tyckte var roligast med detta projekt var utveckling av olika fiende AI-beteenden och hur man som bäst balanserade spelmekaniker för att göra spelet roligt och utmanande för både nybörjare och erfarna spelare.
+                            <br><br>This project was very fun to work on, it was my first time making a VR experience. I learned a lot of new things about design and technical limiatations when it comes game development, especially for VR.
+                            The biggest challenge for me was to figure out how to make interactions feel natural for the player, together with ensuring smooth performance to avoid motion sickness.
 
-                                <br><br>Detta spel skapades över en 16-veckors period, de första 8 veckorna användes för planering och strukturering av spelet samt för att ta reda på vilka spelmekaniker som var möjliga att implementera.
-                                De sista 8 veckorna användes för utvecklingen av spelet, detta inkluderar att lära sig hur Godot fungerar, skriva koden för spelmekanikerna, skapa spelgrafik och speltestande
-                                
-                                <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
-                            </p>
-                        </div>
-                        <div>
-                            <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                            <br><br>I worked on the technical side of the project, creating the blueprints and programming the interactions for the puzzles and objects in the escape room. 
+                            I playtested the game extensively to ensure the moevent, puzzles and interactions functioned as intended and were enjoyable for the player. 
+
+                            <br><br>Video provided is an MVP (minimal viable product) showcase. <a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for any inqueries.</p>
+            <div class="contactButtons">
+                <a class="btn" href="assets/Rasmus_Nordberg_CV_English.pdf" download>Download CV</a>
+                <a class="btn" href="mailto:rasmus.nordberg@icloud.com">rasmus.nordberg@icloud.com</a>
+                <a class="btn" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a>
+                <a class="btn" href="https://github.com/RazzieBoy" target="_blank">Github</a>      
+            </div>
+        </section>
+    </section>
+    <!--ENGLISH SECTION ENDS-->
+    <!--SWEDISH SECTION STARTS-->
+    
+    <section id="swedishVersion">
+        <nav class="navbar">
+            <h1 class="logo">Rasmus Nordberg</h1>
+            <ul class="navigationLinks">
+                <li><a href="#omMig">Om mig</a></li>
+                <li><a href="#projekt">Projekt</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><button onclick="languageSwitch()" class="languageButton">
+                    <img src="images/sweden.png" alt="Switch Language" class="flagIcon"></button></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h2>Hej, Jag är <span>Rasmus</span></h2>
+            <h3>Mjukvaruingenjör | Spelutvecklare | Webutvecklare | UI/UX Desginer | Problemlösare</h3>
+            <p>Jag tycker om att skapa roliga och engagerande upplevelser tillsamans med pålitlig kod med effektiva utvecklingstekniker från konceptidéer till färdiga produkter.</p>
+            <img class="selfPortait" src="images/selfie.jpg" alt="">
+            <div class="headerButtons">
+                <a href="#projekt" class="button">Se Projekt</a>
+                <a href="#kontakt" class="button">Kontakta Mig</a>
+            </div>
+        </header>
+
+        <section id="omMig" class="section">
+            <h2>Om Mig</h2>
+            <p class="aboutMeText">
+                Hejsan, mitt namn är Rasmus Nordberg, jag är en mjukvaruingenjör med passion för skapande av roliga och intressanta interaktiva digitala upplevelser och datorspel.<br><br>
+                        
+                Jag är uppväxt i den södra delen av Sverige, jag upptäckte min passion för datorer och datorspel vid en tidig ålder. 
+                Detta ledde mig till att studera spelutveckling  på LBS Halmstad, här lärde jag mig grunderna för programmering och 
+                spelutveckling genom både teoretiska och praktiska läromedel.<br><br>
+        
+                Efter jag hade tagit studenten på LBS Halmstad fortsatte jag min utbildning inom mjukvaruutveckling på Yoobee Colleges i Nya Zeeland, 
+                här utökade jag mina förmågor inom C++, C#, Unity, Godot, Unreal Engine och HTML5, CSS3 och Javascript för webbutveckling.<br><br>
+            
+                Mitt fokus som mjukvaruingenjör är att skapa upplevelser som är roliga och fångande, om det är datorspel eller andra interaktiva upplevelser. 
+                Jag tycker om att kombinera teknisk problemlösning med kreativa designer samtidigt som jag försöker utmana mig själv vid varje steg för att bli mer kunnig
+            </p>
+        </section>
+
+        <section id="projekt" class="section">
+            <h2>Projekt</h2>
+            <div class="projectGrid">
+                <div id="Minesweeper" class="projectCard">
+                    <h3>Minesweeper</h3>
+                    <div class="projectCardContent">
+                        <span>
+                            <p>
+                                 Enkel minesweeper-klon som körs i konsollen. Målet med detta spel är att rensa ett helt minfält utan att utlösa några bomber.
+                                <br><a class="popUpButton" onclick="openMinesweeperPopUpSwedish()">Läs Mer</a>
+                                <br><br>Utvecklingsverktyg:
+                                <ul class="bulletList">
+                                    <li>IDE: Visual Studio 2022</li>
+                                    <li>Programmeringsspråk: C++</li>
+                                </ul>
+                            </p>
+                        </span>
+                        <video src="assets/minesweeperVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                    </div>
+                </div>
                 <div class="projectCard">
-                    <h2 class="centerContent">Threads</h2>
-                    <div class="projectCardStructure">
-                        <div>
+                    <h3>Overwave</h3>
+                    <div class="projectCardContent">
+                        <span>
+                            <p>
+                                Ett roguelike bullet hell survival-spel där spelaren måste försöka överleva vågor av fiender med ökande svårighetsgrad. 
+                                <br><a class="popUpButton" onclick="openOverwavePopUpSwedish()">Läs Mer</a>
+                                <br><br>Utvecklingsverktyg:
+                                <ul class="bulletList">
+                                    <li>IDE: Godot's Inbyggda Editor</li>
+                                    <li>Spelmotor: Godot 4</li>
+                                    <li>Programmeringsspråk: C#</li>
+                                    <li>Asset Design Program: Photoshop</li>
+                                    <li>Design Metodik: Agile & Scrum</li>
+                                </ul>
+                            </p>
+                        </span>
+                        <video src="assets/OverwaveVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <h3>Threads</h3>
+                    <div class="projectCardContent">
+                        <span>
                             <p>
                                 3D plattformsspel där målet med spelet är att ta sig till slutet av banan så snabbt som möjligt genom att lista ut vilka spelmekaniker som ska användas i olika situationer.
-                                Spelet stödjer LAN-anslutning multiplayer (local area network). Denna funktionalitet blev dock aldrig helt implementerad på grund av tidsbegränsningar och kan därför inte fungera som planerat.
-                                
-                                <br><br>Jag har alltid tycket om 3d plattformsspel med fokus på time trials och speedrunning, så jag utmanade mig själv att försöka skapa min egen version av denna genre.
-                                Från utvecklingen av detta projekt lärde jag mig mycket om Unity-motorn och hur dess fysiksystem fungerar, samt dess nätverksmöjligheter för multiplayer-spel.
-                                Implementeringen av lokal nätverksmultiplayer var en stor utmaning för mig, men, det var även den roligaste och mest givande delen av projektet trots att jag kämpade mest med det.
-                                Jag tyckte också det var väldigt roligt att skapa spelarkontrollen och lista ut hur man skulle få rörelsen att kännas så flytande som möjligt.
-                                
-                                <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                                <br><a class="popUpButton" onclick="openThreadsPopUpSwedish()">Läs Mer</a>
+                                <br><br>Utvecklingsverktyg:
+                                <ul class="bulletList">
+                                    <li>IDE: Visual Studio 2022</li>
+                                    <li>Spelmotor: Unity</li>
+                                    <li>Programmeringsspråk: C#</li>
+                                    <li>Design Program: Photoshop</li>
+                                    <li>Design Metodik: Agile & Scrum</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                        </span>
+                        <video src="assets/threadsVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                     </div>
                 </div>
-
                 <div class="projectCard">
-                    <h2 class="centerContent">The Breakout</h2>
-                    <div class="projectCardStructure">
-                        <div>
-                            <p>
-                                Ett VR (virtual reality) escape room, där målet med spelet är att ta sig ut ur rummet så snabbt som möjligt genom att lösa pussel och hitta ledtrådar. Detta projekt skapades med Unreal Engine med C++ Blueprints tillsammans med en klasskamrat.
-                                
-                                <br><br>Detta projekt var väldigt roligt att arbeta på, det var första gången jag skapade en VR-upplevelse. Jag lärde mig många nya saker om design och tekniska begränsingar när det kommer till spelutveckling, speciellt för VR.
-                                Den största utmaningen för mig var att komma på hur interaktioner skulle kännas naturliga för spelaren, tillsammans med att få en smidig prestanda för att undvika åksjuka.
-
-                                <br><br>Jag arbetade på den tekniska delen av projektet, skapade blueprints och programmerade interaktionerna för pusslen och objekten i spelet.
-                                Jag testade spelet mycket för att säkerställa att rörelser, pussel och interaktioner fungerade som avsett och var roliga för spelaren. 
-                                
-                                <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                    <h3>The Breakout</h3>
+                    <div class="projectCardContent">
+                        <span>
+                            <p style="text-align: justify;">
+                                Ett VR (virtual reality) escape room, där målet med spelet är att ta sig ut ur rummet så snabbt som möjligt genom att lösa pussel och hitta ledtrådar.
+                                <br><a class="popUpButton" onclick="openBreakoutPopUpSwedish()">Läs Mer</a>
+                                <br><br>Utvecklingsverktyg:
+                                <ul class="bulletList">
+                                    <li>IDE: Unreal Engines Inbyggda Blueprint Editor</li>
+                                    <li>Spelmotor: Unreal Engine 5</li>
+                                    <li>Programmeringsspråk: C++ Blueprints</li>
+                                    <li>Asset Design Program: Maya</li>
+                                    <li>Design Metodik: Agile & Scrum</li>
+                                </ul>
                             </p>
-                        </div>
-                        <div>
-                            <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
-                        </div>
+                        </span>
+                        <video src="assets/TheBreakoutDemoVideo.mp4" class="videoSize" loop="loop" controls="controls"></video>
                     </div>
                 </div>
             </div>
-            
-            <footer>
-                <div id="kontaktID" class="centerContent">
-                    <h2>Kontakt</h2>
-                    <div class="contactInfo">
-                        <div>
-                            <h4><span style="display: flex;"> <img src="images/download.png" class="contactImageSize"><a class="hideLink" href="assets/Rasmus_Nordberg_CV_Swedish.pdf" download>Ladda Ner CV</a></span></h4>
-                            <h4><span style="display: flex;"> <img src="images/mailIcon.png" class="contactImageSize">Email: rasmus.nordberg@icloud.com</span></h4>
-                        </div>
-                        <div>
-                            <h4><span style="display: flex;"> <img src="images/linkedinIcon.png" class="contactImageSize"> <a class="hideLink" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a></span></h4>
-                            <h4><span style="display: flex;"> <img src="images/githubIcon.png" class="contactImageSize"> <a class="hideLink" href="https://github.com/RazzieBoy" target="_blank">Github</a></span></h4>
-                        </div>
+        </section>
+
+        <section class="popUps">
+            <div id="popUpOverlaySwedish" class="popUpOverlay"></div>
+            <div id="minesweeperPopUpSwedish" class="popUpContent">
+                <button class="exitButton" onclick="closePopUpSwedish()">+</button>
+                <h2>Minesweeper</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/minesweeperVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            Enkel minesweeper-klon som körs i konsollen. Målet med detta spel är att rensa ett helt minfält utan att utlösa några bomber.
+                            Layouten av minfältet är slumpmässigt genererad varje gång ett nytt spel startas och användaren kan välja en koordinat som de tror inte har några bomber.
+                            Minfältet visar alla tomma koordinater samt de som är direkt intill en eller flera bomber. Detta projekt skapades med C++ i Visual Studio 2022.
+
+                            <br><br> Från utvecklingen av detta projekt lärde jag mig grunderna i C++ programmering såsom att arbeta med arrayer, funktioner, loopar och villkor.
+                            Jag tyckte det var väldigt roligt att lista ut hur man skulle skapa flood-fill algoritmen för att avslöja tomma ytor i minfältet, även hur man slumpade placeringen av bomber och många bomber som är intill varje koordinat.
+                            
+                            <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/Minesweeper" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
                     </div>
                 </div>
-            </footer>
-        </div>
-    </div>
-     
-<script src="index.js"></script>
+            </div>
+            <div id="overwavePopUpSwedish" class="popUpContent">
+                <button class="exitButton" onclick="closePopUpSwedish()">+</button>
+                <h2>Overwave</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/OverwaveVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            Ett roguelike bullet hell survival-spel där spelaren måste försöka överleva vågor av fiender med ökande svårighetsgrad  när spelaren går vidare till högre nivåer i spelet. 
+                            Spelaren har 4 förmågor att använda för att överleva, efter varje runda som slutförs ges ett slumpmässigt föremål till spelaren för att förbättra kararens egenskaper.
+                            
+                            <br><br>Detta projekt har lärt mig mycket om spelutveckling som helhet, från att lära mig en ny spelmotor (Godot), samt att utöka mina kunskaper inom C# programmering och mycket mer.
+                            Det jag tyckte var roligast med detta projekt var utveckling av olika fiende AI-beteenden och hur man som bäst balanserade spelmekaniker för att göra spelet roligt och utmanande för både nybörjare och erfarna spelare.
+
+                            <br><br>Detta spel skapades över en 16-veckors period, de första 8 veckorna användes för planering och strukturering av spelet samt för att ta reda på vilka spelmekaniker som var möjliga att implementera.
+                            De sista 8 veckorna användes för utvecklingen av spelet, detta inkluderar att lära sig hur Godot fungerar, skriva koden för spelmekanikerna, skapa spelgrafik och speltestande
+                            
+                            <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/RougelikeGame" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="threadsPopUpSwedish" class="popUpContent">
+                <button class="exitButton" onclick="closePopUpSwedish()">+</button>
+                <h2>Threads</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/threadsVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            3D plattformsspel där målet med spelet är att ta sig till slutet av banan så snabbt som möjligt genom att lista ut vilka spelmekaniker som ska användas i olika situationer.
+                            Spelet stödjer LAN-anslutning multiplayer (local area network). Denna funktionalitet blev dock aldrig helt implementerad på grund av tidsbegränsningar och kan därför inte fungera som planerat.
+                            
+                            <br><br>Jag har alltid tycket om 3d plattformsspel med fokus på time trials och speedrunning, så jag utmanade mig själv att försöka skapa min egen version av denna genre.
+                            Från utvecklingen av detta projekt lärde jag mig mycket om Unity-motorn och hur dess fysiksystem fungerar, samt dess nätverksmöjligheter för multiplayer-spel.
+                            Implementeringen av lokal nätverksmultiplayer var en stor utmaning för mig, men, det var även den roligaste och mest givande delen av projektet trots att jag kämpade mest med det.
+                            Jag tyckte också det var väldigt roligt att skapa spelarkontrollen och lista ut hur man skulle få rörelsen att kännas så flytande som möjligt.
+                            
+                            <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/RazzieBoy/The-Thread" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="breakoutPopUpSwedish" class="popUpContent">
+                <button class="exitButton" onclick="closePopUpSwedish()">+</button>
+                <h2>The Breakout</h2>
+                <div>
+                    <div class="popUpCardContent">
+                        <video src="assets/TheBreakoutDemoVideo.mp4" loop="loop" controls="controls"></video>
+                        <p>
+                            Ett VR (virtual reality) escape room, där målet med spelet är att ta sig ut ur rummet så snabbt som möjligt genom att lösa pussel och hitta ledtrådar. Detta projekt skapades med Unreal Engine med C++ Blueprints tillsammans med en klasskamrat.
+                            
+                            <br><br>Detta projekt var väldigt roligt att arbeta på, det var första gången jag skapade en VR-upplevelse. Jag lärde mig många nya saker om design och tekniska begränsingar när det kommer till spelutveckling, speciellt för VR.
+                            Den största utmaningen för mig var att komma på hur interaktioner skulle kännas naturliga för spelaren, tillsammans med att få en smidig prestanda för att undvika åksjuka.
+
+                            <br><br>Jag arbetade på den tekniska delen av projektet, skapade blueprints och programmerade interaktionerna för pusslen och objekten i spelet.
+                            Jag testade spelet mycket för att säkerställa att rörelser, pussel och interaktioner fungerade som avsett och var roliga för spelaren. 
+                            
+                            <br><br>Video som tillhandahålls är en MVP (minimal viable product) showcase.<a href="https://github.com/r4moss/BREAKOUT-VR" target="_blank" class=">githubLink"> Github Repo Link</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="section">
+            <h2>Kontakta Mig</h2>
+            <p>Tveka inte att höra av dig vid frågor.</p>
+            <div class="contactButtons">
+                <a class="btn" href="assets/Rasmus_Nordberg_CV_Swedish.pdf" download>Ladda Ner CV</a>
+                <a class="btn" href="mailto:rasmus.nordberg@icloud.com">rasmus.nordberg@icloud.com</a>
+                <a class="btn" href="https://linkedin.com/in/rasmus-nordberg-27b2b1308" target="_blank">Linkedin</a>
+                <a class="btn" href="https://github.com/RazzieBoy" target="_blank">Github</a>  
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>© 2025 Rasmus Nordberg. All rights reserved.</p>
+    </footer>
 </body>
 </html>
