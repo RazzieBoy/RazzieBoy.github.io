@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+:root{
+  color-scheme: dark;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +11,8 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000 100%);
+  background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000 100%) !important;
+  background-color: #0b0c10 !important;
   color: #e0e0e0;
   overflow-x: hidden;
   position: relative;
@@ -282,6 +287,12 @@ footer{
 }
 
 @media (max-width: 828px) {
+  
+  body{
+    background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000 100%) !important;
+    background-color: #0b0c10 !important;
+  }
+
   .navbar{
     flex-direction: column;
     gap: 1rem;
